@@ -85,7 +85,7 @@ public class EventProcessing {
         checkLimitsHealth(killerWhale);
         checkLimitsEnergy(killerWhale);
         status = killerWhaleStatus(killerWhale);
-        System.out.println("Косатка поела рыбу, - 3 энергии.\n" + status);
+        System.out.println("Косатка поела рыбу, - 10 энергии.\n" + status);
     }
 
     private void eatSeal (KillerWhale killerWhale) {
@@ -99,7 +99,7 @@ public class EventProcessing {
         checkLimitsHealth(killerWhale);
         checkLimitsEnergy(killerWhale);
         status = killerWhaleStatus(killerWhale);
-        System.out.println("Косатка поела тюленя, - 8 энергии.\n" + status);
+        System.out.println("Косатка поела тюленя, - 15 энергии.\n" + status);
     }
     private void eatTurtle (KillerWhale killerWhale) {
         int energy = killerWhale.getEnergy();
@@ -111,10 +111,8 @@ public class EventProcessing {
         killerWhale.setHealf(health);
         checkLimitsHealth(killerWhale);
         checkLimitsEnergy(killerWhale);
-        killerWhale.setEnergy(energy);
-        killerWhale.setHealf(health);
         status = killerWhaleStatus(killerWhale);
-        System.out.println("Косатка поела черепаху, - 5 энергии.\n" + status);
+        System.out.println("Косатка поела черепаху, - 12 энергии.\n" + status);
     }
     private void attackWhales(KillerWhale killerWhale) {
     Random random = new Random();
@@ -130,7 +128,7 @@ public class EventProcessing {
         checkLimitsHealth(killerWhale);
         checkLimitsEnergy(killerWhale);
         status = killerWhaleStatus(killerWhale);
-        System.out.println("Косатка напала на семейство китов и победила. Она съела детёныша кита, -20 энергии.\n" + status);
+        System.out.println("Косатка напала на семейство китов и победила. Она съела детёныша кита, -30 энергии.\n" + status);
     }
         else  {
             energy -= 35;
@@ -141,7 +139,7 @@ public class EventProcessing {
             checkLimitsHealth(killerWhale);
             checkLimitsEnergy(killerWhale);
             status = killerWhaleStatus(killerWhale);
-            System.out.println("Косатка напала на семейство китов и проиграла, -20 энергии.\n" + status);
+            System.out.println("Косатка напала на семейство китов и проиграла, -35 энергии.\n" + status);
         }
 
     }
@@ -159,7 +157,7 @@ public class EventProcessing {
             checkLimitsHealth(killerWhale);
             checkLimitsEnergy(killerWhale);
             status = killerWhaleStatus(killerWhale);
-            System.out.println("Косатка напала на акулу и победила. Она съела акулу, -25 энергии.\n" + status);
+            System.out.println("Косатка напала на акулу и победила. Она съела акулу, -30 энергии.\n" + status);
         }
         else  {
             energy -= 30;
@@ -170,7 +168,7 @@ public class EventProcessing {
             checkLimitsHealth(killerWhale);
             checkLimitsEnergy(killerWhale);
             status = killerWhaleStatus(killerWhale);
-            System.out.println("Косатка напала на акулу и проиграла, -20 энергии.\n" + status);
+            System.out.println("Косатка напала на акулу и проиграла, -30 энергии.\n" + status);
         }
 
     }
